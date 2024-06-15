@@ -6,6 +6,7 @@ public class Fractions {
         Scanner sc = new Scanner(System.in);
         BigDecimal bigD = new BigDecimal(sc.nextLine());
         BigDecimal bigD2 = new BigDecimal(sc.nextLine());
+        sc.close();
         System.out.println(simplestForm(bigD, bigD2));
     }
     public static String simplestForm(BigDecimal numerator, BigDecimal denominator){
