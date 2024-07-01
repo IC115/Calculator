@@ -31,13 +31,10 @@ public class Fractions {
         // Check if we should have a negative sign in our output
         boolean negativeSign = false;
         
-        if(!num1.equals(num1.abs())){
-            negativeSign = !negativeSign;
+        if(num1.equals(num1.abs()) ^ num2.equals(num2.abs())){
+            negativeSign = true;
         }
-        if (!num2.equals(num2.abs())) {
-            negativeSign = !negativeSign;
-        }
-        
+
         // Ignore the sign
         num1 = num1.abs();
         num2 = num2.abs();

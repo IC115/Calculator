@@ -63,14 +63,27 @@ public class QuadraticEquations {
             if (sqrtDiscriminant.remainder(twoA).equals(BigDecimal.ZERO)) {
                 sqrtDiscriminant = sqrtDiscriminant.divide(twoA);
                 if(!complexSolution){
+                    if (sqrtDiscriminant.equals(BigDecimal.ZERO)) {
+                        // Only one solution if the discriminant is 0
+                        return "x = " + b.negate();
+                    }
                     return "x = " + b.negate() + " +/- " + sqrtDiscriminant;
                 }else{
+                    if (sqrtDiscriminant.equals(BigDecimal.ZERO)) {
+                        return "x = " + b.negate();
+                    }
                     return "x = " + b.negate() + " +/- " + sqrtDiscriminant + "i";
                 }
             }else{
                 if(!complexSolution){
+                    if (sqrtDiscriminant.equals(BigDecimal.ZERO)) {
+                        return "x = " + b.negate();
+                    }
                     return "x = " + b.negate() + " +/- " + sqrtDiscriminant;
                 }else{
+                    if (sqrtDiscriminant.equals(BigDecimal.ZERO)) {
+                        return "x = " + b.negate();
+                    }
                     return "x = " + b.negate() + " +/- " + sqrtDiscriminant + "i";
                 }
             }
